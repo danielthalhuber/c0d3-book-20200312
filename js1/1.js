@@ -7,10 +7,17 @@
  * @returns {function}
  */
 
-const solution = (num) => {
-  return () => {}
-}
+const solution = (num = 0) => {
+  return () => {
+    num += 1;
+    return num;
+  };
+};
+
+// for the love of one-liners:
+const solution2 = (num = 0) => () => ++num;
 
 module.exports = {
-  solution
-}
+  solution,
+  solution2,
+};
