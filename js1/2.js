@@ -11,10 +11,15 @@
  * @returns {function}
  */
 
-const solution = (num, fun) => {
-  return () => { }
-}
+const solution = (num = 0, fun = () => {}, i = 1) => {
+  return () => {
+    if (i > num) return null;
+
+    i += 1;
+    return fun();
+  };
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
