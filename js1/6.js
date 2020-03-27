@@ -8,9 +8,11 @@
  */
 
 const solution = (num, i = 2) => {
-  return true
-}
+  if (num < 2 || (num > 2 && num % i === 0)) return false;
+
+  return i >= num ** 0.5 || solution(num, i + 1);
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
