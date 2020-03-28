@@ -8,7 +8,7 @@
  */
 
 const solution = (num = 0, fun) => {
-  if (num <= 0) return null;
+  if (num < 1) return null;
 
   fun();
   return solution(num - 1, fun);
