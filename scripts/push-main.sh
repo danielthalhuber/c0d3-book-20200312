@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git checkout main && git push origin master --force
+git checkout main && git push origin main --force
