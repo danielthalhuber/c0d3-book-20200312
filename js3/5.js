@@ -5,9 +5,15 @@
  * @return {object}
  **/
 
-const solution = (obj1, obj2) => {
-  return {}
-}
+const solution = (obj1, obj2) =>
+  Object.entries(obj1).reduce(
+    (ac, [key, value]) => ({
+      ...ac,
+      [key]: obj2.hasOwnProperty(key) ? obj2[key](value) : value,
+    }),
+    {}
+  );
+
 module.exports = {
-  solution
-}
+  solution,
+};
