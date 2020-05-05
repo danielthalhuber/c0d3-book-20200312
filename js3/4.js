@@ -5,10 +5,15 @@
  * @returns {boolean}
  */
 
-const solution = (arr, num) => {
-  return true
-}
+const solution = (arr, num, comps = {}) => {
+  if (arr.length <= 0) return false;
+
+  const i = arr.length - 1;
+  if (comps.hasOwnProperty(num - arr[i])) return true;
+
+  return solution(arr.slice(0, -1), num, { ...comps, [arr[i]]: i });
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
