@@ -8,14 +8,20 @@
     [{x: 0, y: 2}, {x: 1, y: 2}],
     [{x: 0, y: 3}, {x: 1, y: 3}],
   ]
- * @param {integer} num1 {integer} num2
- * @return {array} arr
+ * @param {number} num1
+ * @param {number} num2
+ * @return {object[]}
  */
 
-const solution = (num1, num2) => {
-  return []
-}
+const solution = (num1, num2) =>
+  Array(num1)
+    .fill(null)
+    .map((_, r) =>
+      Array(num2)
+        .fill(null)
+        .map((_, c) => ({ x: c, y: r }))
+    );
 
 module.exports = {
-  solution
-}
+  solution,
+};
