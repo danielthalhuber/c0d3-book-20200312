@@ -16,9 +16,10 @@
  */
 
 const solution = (arr, cb) => {
-  return () => {}
-}
+  let i = 0;
+  return () => cb(arr[i++ % arr.length]);
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
