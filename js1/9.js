@@ -9,9 +9,11 @@
  */
 
 const solution = (str, fun, result = '', i = 0) => {
-  return ''
-}
+  if (i >= str.length) return result;
+
+  return solution(str, fun, result + fun(str[i]), i + 1);
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};

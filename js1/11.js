@@ -9,10 +9,8 @@
  * @returns {function}
  */
 
-const solution = (a, fun) => {
-  return () => { }
-}
+const solution = (a, fun) => () => setTimeout(fun, a);
 
 module.exports = {
-  solution
-}
+  solution,
+};
