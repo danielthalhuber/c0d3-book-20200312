@@ -8,7 +8,7 @@ pad_number() {
 }
 
 # set the challenge counts
-challenge_counts=(10 12)
+challenge_counts=(10 12 11 10)
 
 # ensure that we're not on the main branch and then remove it
 git checkout master
